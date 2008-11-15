@@ -1,6 +1,6 @@
 === Get Picasa Albums ===
 Contributors: lepolt
-Donate link: http://www.lepolt.com/blog/getpicasaalbums
+Donate link: http://www.lepolt.com/blog/downloads/get-picasa-albums
 Tags: photos, albums, photo albums, picasa, google,
 Requires at least: 2.6.3
 Tested up to: 2.6.3
@@ -12,11 +12,7 @@ Gets a listing of Picasa Web Albums and displays album thumbnails on your page.
 
 Get Picasa Albums will take a given Picasa username and fetch a listing of all public albums for the given user. Thumbnails to the individual albums will be displayed in a table on the specified WordPress page. Each thumbnail is a link to the actual Picasa album hosted by Google. The user can specify the number of columns to display, so that the resulting table matches the width on the webpage. The user may also specify if random thumnails are used instead of the Picasa thumbs already specified. 
 
-If random thumnails are used, a local cache file for each Picasa album will be stored in a sub-folder of the plugin. The cache files are updated if the timestamp on an album changes. If the current stamp matches an existing file, the existing file will be used to fetch a random thumbnail. Usage (In a WordPress page or blog entry):
-[GetPicasaAlbums user="username" col="x" rand="y/n"]
-username: Picasa username (required)
-col:      Number of columns to display (not required; default=2)
-rand:     Random thumbnails (not required; default=y)
+If random thumnails are used, a local cache file for each Picasa album will be stored in a sub-folder of the plugin. The cache files are updated if the timestamp on an album changes. If the current stamp matches an existing file, the existing file will be used to fetch a random thumbnail. 
 
 == Installation ==
 
