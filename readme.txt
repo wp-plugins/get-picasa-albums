@@ -2,7 +2,7 @@
 Contributors: lepolt
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=1176262
 Tags: photos, albums, photo albums, picasa, google,
-Requires at least: 2.6.3
+Requires at least: 2.5
 Tested up to: 2.6.3
 Stable tag: trunk
 
@@ -18,14 +18,16 @@ If random thumnails are used, a local cache file for each Picasa album will be s
 
 1. Upload the 'GetPicasaAlbums' directory to the '/wp-content/plugins/' directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
-3. Place [GetPicasaAlbums user="username" col="x" rand="y/n"] in the content of the page
-   user: Picasa username
-   col:  Number of columns to display (not required; default=2)
-   rand: Display random thumbnails (not required; default=y)
+3. Place [GetPicasaAlbums user="username" col="x" random="y/n"] in the content of the page
+   user:   Picasa username
+   col:    Number of columns to display (not required; default=2)
+   random: Display random thumbnails (not required; default=y)
 
 == Frequently Asked Questions ==
-= Question 1 =
-Answer to question 1. Sorry, no questions yet..
+= Why aren't my thumbnails showing up? =
+1. Make sure that your syntax is correct
+2. Make sure that the 'PicasaAlbumCache' directory is located within the 'GetPicasaAlbums' directory
+3. Make sure read/write privledges are available on the 'PicasaAlbumCache' directory 
 
 == Screenshots ==
 
