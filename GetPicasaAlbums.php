@@ -4,7 +4,7 @@ Plugin Name: Get Picasa Albums
 Plugin URI: http://www.lepolt.com/blog/downloads/get-picasa-albums/
 Description: Gets a listing of Picasa Web Albums and displays album thumbnails on your page
 Author: Jonathan Lepolt
-Version: 1.0
+Version: 1.0.1
 Author URI: http://www.lepolt.com
 */
 
@@ -45,7 +45,8 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.*/
 //      http://www.ibm.com/developerworks/library/x-picasalbum/
 //
 // Version history:
-//   1.0 - 15 November 2008: Initial release
+//   1.0   - 15 November 2008: Initial release
+//   1.0.1 - 16 November 2008: Fixed hard-coded location to get-picasa-albums
 //
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -86,7 +87,7 @@ function main($atts)
    // build feed URL
    $feedURL = "http://picasaweb.google.com/data/feed/api/user/$userid?kind=album";
    $picasaURL = "http://picasaweb.google.com/$user/";
-   $picasaAlbumCache = getcwd()  . '/wp-content/plugins/GetPicasaAlbums/PicasaAlbumCache';
+   $picasaAlbumCache = getcwd()  . '/wp-content/plugins/get-picasa-albums/PicasaAlbumCache';
 
    // Read feed into SimpleXML object
    $sxml = simplexml_load_file($feedURL);
