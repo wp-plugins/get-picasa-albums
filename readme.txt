@@ -23,7 +23,7 @@ If random thumnails are used, a local cache file for each Picasa album will be s
 == Frequently Asked Questions ==
 = Why aren't my thumbnails showing up? =
 1. Make sure that your syntax is correct
-2. Make sure that the 'PicasaAlbumCache' directory is located within the 'GetPicasaAlbums' directory
+2. Make sure that the 'PicasaAlbumCache' directory is located within the 'get-picasa-albums' directory
 3. Make sure read/write privledges are available on the 'PicasaAlbumCache' directory 
 4. Make sure author didn't code it up wrong (whoops, should be fixed)
 
