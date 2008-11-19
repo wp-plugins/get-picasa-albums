@@ -4,7 +4,7 @@ Plugin Name: Get Picasa Albums
 Plugin URI: http://www.lepolt.com/blog/downloads/get-picasa-albums/
 Description: Gets a listing of Picasa Web Albums and displays album thumbnails on your page
 Author: Jonathan Lepolt
-Version: 1.0.1
+Version: 1.0.2
 Author URI: http://www.lepolt.com
 */
 
@@ -45,8 +45,9 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.*/
 //      http://www.ibm.com/developerworks/library/x-picasalbum/
 //
 // Version history:
-//   1.0   - 15 November 2008: Initial release
+//   1.0.0 - 15 November 2008: Initial release
 //   1.0.1 - 16 November 2008: Fixed hard-coded location to get-picasa-albums
+//   1.0.2 - 19 November 2008: Removed hard-coded cache dir, check PHP version >= 5
 //
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -65,7 +66,17 @@ add_shortcode('GetPicasaAlbums', 'main');
 //--------------------------------------------------------------------------------------------------
 function main($atts)
 {
-   // Extract parameters
+   // Make sure we're running an up-to-date version of PHP
+   $phpVersion = phpversion();
+   $verArray = explode('.', $phpVersion);
+   if( (int)$verArray[0] < 5 )
+   {
+      echo "'Get Picasa Albums' requires PHP version 5 or newer.<br>\n";
+      echo "Your server is running version $phpVersion<br>\n";
+      exit;
+   }
+
+   // Extract WordPress parameters
    extract(shortcode_atts(array('user' => 'INVALID', 'col' => '2', 'random' => 'y',), $atts));
 
    // Make sure they entered a Picasa username
@@ -82,12 +93,11 @@ function main($atts)
 
    // Create default variables
    $userid = "$user%40googlemail.com";    // picasa_user_id@gmail.com
-   $errorFlag = false;
 
    // build feed URL
    $feedURL = "http://picasaweb.google.com/data/feed/api/user/$userid?kind=album";
    $picasaURL = "http://picasaweb.google.com/$user/";
-   $picasaAlbumCache = getcwd()  . '/wp-content/plugins/get-picasa-albums/PicasaAlbumCache';
+   $picasaAlbumCache = dirname(__FILE__) . '/PicasaAlbumCache';
 
    // Read feed into SimpleXML object
    $sxml = simplexml_load_file($feedURL);

@@ -27,5 +27,14 @@ If random thumnails are used, a local cache file for each Picasa album will be s
 3. Make sure read/write privledges are available on the 'PicasaAlbumCache' directory 
 4. Make sure author didn't code it up wrong (whoops, should be fixed)
 
+= What version of PHP is required? =
+PHP 5.x
+
+= Will this code work without WordPress? =
+Not unless you modify it
+
+= Will you help me modify the code so I don't have to use WordPress? =
+No.
+
 == Screenshots ==
-1. Sorry, no screenshots
+Sorry, no screenshots
