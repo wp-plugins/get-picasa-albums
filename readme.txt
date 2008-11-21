@@ -14,6 +14,8 @@ Get Picasa Albums will take a given Picasa username and fetch a listing of all p
 
 If random thumnails are used, a local cache file for each Picasa album will be stored in a sub-folder of the plugin. The cache files are updated if the timestamp on an album changes. If the current stamp matches an existing file, the existing file will be used to fetch a random thumbnail. 
 
+Please note that this plugin requires PHP5 or higher
+
 == Installation ==
 1. Extract zip file (should create get-picasa-albums directory)
 2. Upload the 'get-picasa-albums' directory to the '/wp-content/plugins/' directory
