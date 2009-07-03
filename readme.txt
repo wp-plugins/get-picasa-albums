@@ -3,7 +3,7 @@ Contributors: lepolt
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=1176262
 Tags: photos, albums, photo albums, picasa, google,
 Requires at least: 2.5
-Tested up to: 2.6.3
+Tested up to: 2.8
 Stable tag: trunk
 
 Gets a listing of Picasa Web Albums and displays album thumbnails on your page.
